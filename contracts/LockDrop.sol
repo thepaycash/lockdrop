@@ -86,7 +86,7 @@ contract LockDrop {
         uint256 ETHForClaimer = lI.lockedAmount;
         lI.lockedAmount = 0;
 
-        lockingToken.transfer(claimer, tokensForClaimer);
+        require(lockingToken.transfer(claimer, tokensForClaimer), "Token transfer failed");
         claimer.transfer(ETHForClaimer);
 
         emit ClaimedETH(claimer, ETHForClaimer);
