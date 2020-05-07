@@ -8,8 +8,8 @@ import "./COLToken.sol";
 contract LockDrop {
     using SafeMath for uint256;
 
-    uint256 lockDeadline;
-    uint256 dropStartTimeStamp;
+    uint256 public lockDeadline;
+    uint256 public dropStartTimeStamp;
     uint256 totalAmountOfTokenDrop;
     uint256 totalLockedWei;
 
